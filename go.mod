@@ -45,3 +45,7 @@ require (
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/yaml.v2 v2.2.1
 )
+
+replace github.com/hyperledger/fabric-sdk-go/third_party/github.com/hyperledger/fabric v0.0.0-20190524192706-bfae339c63bf => ./third_party/github.com/hyperledger/fabric
+
+go 1.13

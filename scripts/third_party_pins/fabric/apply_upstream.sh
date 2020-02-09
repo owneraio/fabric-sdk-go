@@ -11,8 +11,8 @@
 
 set -e
 
-UPSTREAM_PROJECT="github.com/hyperledger/fabric"
-UPSTREAM_BRANCH="${UPSTREAM_BRANCH:-release}"
+UPSTREAM_PROJECT="github.com/owneraio/fabric"
+UPSTREAM_BRANCH="development"
 SCRIPTS_PATH="scripts/third_party_pins/fabric"
 PATCHES_PATH="${SCRIPTS_PATH}/patches"
 

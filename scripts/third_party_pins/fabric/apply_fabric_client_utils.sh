@@ -269,7 +269,7 @@ gofilter() {
     $GOFILTER_CMD -filename "${TMP_PROJECT_PATH}/${FILTER_FILENAME}.bak" \
         -filters "$FILTERS_ENABLED" -fn "$FILTER_FN" -gen "$FILTER_GEN" -type "$FILTER_TYPE" \
         > "${TMP_PROJECT_PATH}/${FILTER_FILENAME}"
-} 
+}
 
 echo "Modifying go source files"
 FILTER_FILENAME="bccsp/pkcs11/impl.go"

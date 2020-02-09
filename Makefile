@@ -69,8 +69,8 @@ BASE_GO_VERSION = "1.12.5"
 # Upstream fabric patching (overridable)
 THIRDPARTY_FABRIC_CA_BRANCH ?= master
 THIRDPARTY_FABRIC_CA_COMMIT ?= v2.0.0-alpha
-THIRDPARTY_FABRIC_BRANCH    ?= master
-THIRDPARTY_FABRIC_COMMIT    ?= v2.0.0-alpha
+THIRDPARTY_FABRIC_BRANCH    ?= development
+THIRDPARTY_FABRIC_COMMIT    ?= development
 
 # Force removal of images in cleanup (overridable)
 FIXTURE_DOCKER_REMOVE_FORCE ?= false
@@ -572,7 +572,7 @@ endif
 thirdparty-pin:
 	@echo "Pinning third party packages ..."
 	@UPSTREAM_COMMIT=$(THIRDPARTY_FABRIC_COMMIT) UPSTREAM_BRANCH=$(THIRDPARTY_FABRIC_BRANCH) scripts/third_party_pins/fabric/apply_upstream.sh
-	@UPSTREAM_COMMIT=$(THIRDPARTY_FABRIC_CA_COMMIT) UPSTREAM_BRANCH=$(THIRDPARTY_FABRIC_CA_BRANCH) scripts/third_party_pins/fabric-ca/apply_upstream.sh
+#	@UPSTREAM_COMMIT=$(THIRDPARTY_FABRIC_CA_COMMIT) UPSTREAM_BRANCH=$(THIRDPARTY_FABRIC_CA_BRANCH) scripts/third_party_pins/fabric-ca/apply_upstream.sh
 
 .PHONY: populate
 populate: populate-vendor populate-fixtures-stable
